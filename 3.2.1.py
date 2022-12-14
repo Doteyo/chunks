@@ -77,5 +77,5 @@ for line in data:
         years_csv_files[temp_year] = codecs.open(f"chunks_csv/{temp_year}.csv", 'w', 'utf_8_sig')
     csv.writer(years_csv_files[temp_year]).writerow(line)
 
-# Выхожу закрывая файлы, иначе это слишком долго.
-sys.exit()
+# Прошлый вариант не сработал(
+[x.close() for x in years_csv_files.values()]
